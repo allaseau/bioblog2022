@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         init_Session();
         $_SESSION['login'] = $user_infos['username'];
         $redirect = isset($_GET['redirect']) ? urldecode($_GET['redirect']) : '../articles' ;
+        redirect($redirect);
     }
     
 }
