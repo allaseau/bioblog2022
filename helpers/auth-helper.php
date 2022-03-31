@@ -6,3 +6,19 @@ function redirect($url, $permanent = false) {
     }
     exit();
 }
+
+function init_Session() {
+    session_start();
+}
+
+function prevent_not_connected($init_session = false) {
+    if ($init_session) { 
+        init_Session();
+    }
+    
+    $connected = isset($_SESSION['login']);
+    if(!$connected) {
+        $redirect_url = urlencode($_SERVER['PHP_SELF']);
+        redirect('../login?redirect=' . $redirect_url);    
+    }
+}
