@@ -2,16 +2,17 @@
 
 require_once "../config/database.php";
 
-function getArticles() {
+function getArticles($page) {
     global $db_default_connection;
-    $query = "SELECT id, title, content, creation_date, image FROM articles";
+    $offset = ($page - 1) * ROW_PER_PAGE;
+    $query = "SELECT id, title, content, creation_date, image FROM articles LIMIT {$offset}, " .ROW_PER_PAGE;
     $stmt = $db_default_connection->prepare($query);
     $stmt->execute();
     return $stmt;
 }
 
-function getMappedArticles() {
-    $stmt = getArticles();
+function getMappedArticles($page) {
+    $stmt = getArticles($page);
     $count = $stmt->rowCount();
 
     $articles = [];

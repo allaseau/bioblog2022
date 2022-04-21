@@ -1,3 +1,5 @@
+<?php require_once "../helpers/form-helper.php"; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <?php $title="Articles"; require "../head.php"; ?>
@@ -20,6 +22,14 @@
                     </article>
                 </div>
             <?php endforeach; ?>
+        </div>
+        <div>
+            <?php if($page > 1): ?>
+            <a href="<?= getSelfUrl()?> ?page=<?= $page-1?>" class="float-left">Précédent</a>
+            <?php endif; ?>
+            <?php if(count($articles_list) === ROW_PER_PAGE):?>
+            <a href="<?= getSelfUrl()?> ?page=<?= $page+1?>" class="float-right">Suivant</a>
+            <?php endif; ?>
         </div>
     </div>
 
