@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ];
 
     if(sizeof($validations) === 0) {
-        if(isset($_FILES['image']['name'])) {
+        if(!empty($_FILES['image']['name'])) {
             $target_dir = '../uploads/';
             $target_file = $target_dir . $_FILES['image']['name'];
             move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
