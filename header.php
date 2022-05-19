@@ -1,5 +1,6 @@
 <header>
-    <nav class="navbar navar-light bg-light">
-        <h1 class="navbar-brand mb-0"><?= $appName ?></h1>
-    </nav>    
+    <nav class="navbar navbar-light bg-light">
+        <h1 class="navbar-brand mb-0 mr-auto"><a href="/bioblog"><?= $appName ?></a></h1>
+        <a href="/bioblog/admin" class="btn btn-warning">Admin</a>
+    </nav>
 </header>

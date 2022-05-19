@@ -1,0 +1,5 @@
+1) Créer une page "manage-categories" ( 1 page = 3 fichiers ;-) ) OK
+2) Créer une catégorie et l'ajouter/sauver dans une variable de session OK
+3) Lister les catégories
+4) Modifier une catégorie
+5) Supprimer une catégorie

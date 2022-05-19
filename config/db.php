@@ -7,12 +7,12 @@ $db_password = "bioblog";
 
 function getDBConnection($host, $name, $username, $password) {
     $connection = null;
-    try{
+    try {
         $connection = new PDO("mysql:host=$host;dbname=$name", $username, $password);
-        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO:: ERRMODE_EXCEPTION);
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $connection->exec("set names utf8");
     } catch (PDOException $exception) {
-        echo "Connection Error: " . $exception->getMessage();
+        echo "Connection error: " . $exception->getMessage(); 
     }
     return $connection;
 }

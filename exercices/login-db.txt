@@ -1,0 +1,9 @@
+TODO:
+
+Il faut supprimer le mécanisme qui vérifie si l'utilisateur est "bob" 
+et se connecter a la base de données.
+
+1) Créer une nouvelle table
+2) Se connecter à cette nouvelle table (model.php)
+3) Vérifier que l'utilisateur entré dans l'interface soit connu en base de données (model.php + index.php)
+4) Afficher un message d'erreur si l'utilisateur n'existe pas avec ce mot de passe (view.php)

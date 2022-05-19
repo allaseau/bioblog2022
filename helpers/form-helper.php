@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function sanitize_input($data) {
     $data = trim($data);
