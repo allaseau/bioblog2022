@@ -7,6 +7,8 @@ require_once '../helpers/auth-helper.php';
 
 #region Post logic
 
+
+
 $hasError = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
